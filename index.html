@@ -145,26 +145,289 @@ class="img-fluid hero-image">
 
 <!-- Form akan dibuat pada Part 2 -->
 
-<section class="container my-5">
+<section class="container mb-5">
 
-<div class="coming">
+<div class="row g-4">
 
-<h2>
+<!-- ================= LEFT ================= -->
 
-Form Buku Tamu
+<div class="col-lg-8">
 
-</h2>
+<div class="card shadow-lg border-0 rounded-4">
+
+<div class="card-header bg-primary text-white p-4 d-flex justify-content-between align-items-center">
+
+<h3 class="m-0">
+
+<i class="bi bi-people-fill"></i>
+
+Formulir Buku Tamu
+
+</h3>
+
+<span id="tanggalHari"></span>
+
+</div>
+
+<div class="card-body p-4">
 
 <p>
 
-(Part 2)
+Silakan lengkapi data di bawah ini dengan benar.
 
 </p>
+
+<form id="guestForm">
+
+<!-- Nama -->
+
+<div class="mb-3">
+
+<label class="form-label">
+
+<i class="bi bi-person-circle"></i>
+
+Nama Lengkap
+
+</label>
+
+<input
+
+type="text"
+
+id="nama"
+
+class="form-control form-control-lg"
+
+placeholder="Masukkan nama lengkap"
+
+required>
+
+</div>
+
+<!-- Instansi -->
+
+<div class="mb-3">
+
+<label class="form-label">
+
+<i class="bi bi-building"></i>
+
+Instansi
+
+</label>
+
+<input
+
+type="text"
+
+id="instansi"
+
+class="form-control form-control-lg"
+
+placeholder="Masukkan instansi"
+
+required>
+
+</div>
+
+<!-- Alamat -->
+
+<div class="mb-3">
+
+<label class="form-label">
+
+<i class="bi bi-geo-alt-fill"></i>
+
+Alamat Instansi
+
+</label>
+
+<textarea
+
+id="alamat"
+
+class="form-control"
+
+rows="3"
+
+placeholder="Masukkan alamat instansi"
+
+required></textarea>
+
+</div>
+
+<!-- HP -->
+
+<div class="mb-3">
+
+<label class="form-label">
+
+<i class="bi bi-phone-fill"></i>
+
+Nomor HP
+
+</label>
+
+<input
+
+type="text"
+
+id="hp"
+
+class="form-control form-control-lg"
+
+placeholder="08xxxxxxxxxx"
+
+required>
+
+</div>
+
+<!-- Tanggal -->
+
+<div class="mb-3">
+
+<label class="form-label">
+
+<i class="bi bi-calendar-event-fill"></i>
+
+Tanggal
+
+</label>
+
+<input
+
+type="date"
+
+id="tanggal"
+
+class="form-control form-control-lg"
+
+required>
+
+</div>
+
+<!-- Tujuan -->
+
+<div class="mb-4">
+
+<label class="form-label">
+
+<i class="bi bi-journal-text"></i>
+
+Tujuan Kunjungan
+
+</label>
+
+<select
+
+id="tujuan"
+
+class="form-select form-select-lg"
+
+required>
+
+<option value="">Pilih Tujuan</option>
+
+<option>Konsultasi</option>
+
+<option>Penyerahan Sampel</option>
+
+<option>Pengambilan Hasil</option>
+
+<option>Pengaduan</option>
+
+<option>Lainnya</option>
+
+</select>
+
+</div>
+
+<button
+
+type="submit"
+
+class="btn btn-primary btn-lg w-100">
+
+<i class="bi bi-send-fill"></i>
+
+Kirim Data
+
+</button>
+
+</form>
+
+<div
+
+id="status"
+
+class="alert alert-success mt-4 d-none">
+
+Data berhasil dikirim.
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ================= RIGHT ================= -->
+
+<div class="col-lg-4">
+
+<div class="card border-0 shadow rounded-4">
+
+<div class="card-body p-4">
+
+<h3 class="text-primary">
+
+<i class="bi bi-clipboard-check-fill"></i>
+
+Mengapa Mengisi Buku Tamu?
+
+</h3>
+
+<hr>
+
+<ul class="list-group list-group-flush">
+
+<li class="list-group-item">
+
+✅ Mempercepat proses pelayanan
+
+</li>
+
+<li class="list-group-item">
+
+✅ Data kunjungan tercatat rapi
+
+</li>
+
+<li class="list-group-item">
+
+✅ Meningkatkan transparansi
+
+</li>
+
+<li class="list-group-item">
+
+✅ Mendukung pelayanan digital
+
+</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
-
 
 
 <footer>
