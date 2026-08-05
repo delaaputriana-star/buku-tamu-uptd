@@ -1,53 +1,73 @@
-const scriptURL="https://script.google.com/macros/s/AKfycbzRe2lgV8StipYay4ghixsGdkrZXdUpyDi6OGLApV3bidBWkD7Di88mAXAFdGsOkzWI/exec";
+const scriptURL = "https://script.google.com/macros/s/AKfycbzRe2lgV8StipYay4ghixsGdkrZXdUpyDi6OGLApV3bidBWkD7Di88mAXAFdGsOkzWI/exec";
 
-document
-.getElementById("guestForm")
-.addEventListener("submit",function(e){
+// Menampilkan tanggal hari ini
+const hari = new Date();
 
-e.preventDefault();
-
-const data={
-
-nama:document.getElementById("nama").value,
-
-instansi:document.getElementById("instansi").value,
-
-alamat:document.getElementById("alamat").value,
-
-hp:document.getElementById("hp").value,
-
-tanggal:document.getElementById("tanggal").value,
-
-tujuan:document.getElementById("tujuan").value
-
+const options = {
+  weekday: 'long',
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
 };
 
-fetch(scriptURL,{
+document.getElementById("tanggalHari").innerHTML =
+  hari.toLocaleDateString('id-ID', options);
 
-method:"POST",
+// Isi otomatis tanggal
+document.getElementById("tanggal").valueAsDate = new Date();
 
-body:JSON.stringify(data)
+// Submit Form
+document.getElementById("guestForm").addEventListener("submit", function (e) {
 
-})
+  e.preventDefault();
 
-.then(res=>res.text())
+  const data = {
+    nama: document.getElementById("nama").value,
+    instansi: document.getElementById("instansi").value,
+    alamat: document.getElementById("alamat").value,
+    hp: document.getElementById("hp").value,
+    tanggal: document.getElementById("tanggal").value,
+    tujuan: document.getElementById("tujuan").value
+  };
 
-.then(res=>{
+  fetch(scriptURL, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
 
-document.getElementById("status").innerHTML=
+  .then(response => response.text())
 
-"✔ Data berhasil disimpan";
+  .then(result => {
 
-document.getElementById("guestForm").reset();
+    const status = document.getElementById("status");
 
-})
+    status.classList.remove("d-none");
+    status.classList.remove("alert-danger");
+    status.classList.add("alert-success");
 
-.catch(error=>{
+    status.innerHTML = "✔ Data berhasil disimpan.";
 
-document.getElementById("status").innerHTML=
+    document.getElementById("guestForm").reset();
 
-"Gagal mengirim data.";
+    document.getElementById("tanggal").valueAsDate = new Date();
 
-});
+  })
+
+  .catch(error => {
+
+    const status = document.getElementById("status");
+
+    status.classList.remove("d-none");
+    status.classList.remove("alert-success");
+    status.classList.add("alert-danger");
+
+    status.innerHTML = "❌ Gagal mengirim data.";
+
+    console.error(error);
+
+  });
 
 });
