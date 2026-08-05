@@ -1,72 +1,171 @@
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+}
+
 body{
 
-background:linear-gradient(135deg,#dff6dd,#b8e4c9);
-
-font-family:'Segoe UI',sans-serif;
+background:#f4f8fb;
 
 }
 
-.card{
 
-border-radius:20px;
 
-overflow:hidden;
-
-}
-
-.card-header{
-
-padding:40px;
-
-}
-
-.card-header img{
+header{
 
 background:white;
 
-padding:10px;
+box-shadow:0px 2px 10px rgba(0,0,0,.08);
 
-border-radius:50%;
-
-}
-
-label{
-
-font-weight:600;
-
-margin-bottom:5px;
+padding:15px;
 
 }
 
-.form-control,
-.form-select{
 
-border-radius:10px;
 
-}
+.logo{
 
-.btn{
-
-border-radius:10px;
-
-font-weight:bold;
-
-transition:.3s;
+width:70px;
 
 }
 
-.btn:hover{
 
-transform:translateY(-2px);
+
+.navbar h5{
+
+font-size:20px;
+
+font-weight:700;
+
+color:#0f4ea8;
+
+margin:0;
 
 }
 
-#status{
 
-font-weight:bold;
 
-color:green;
+.navbar p{
 
-font-size:18px;
+margin:0;
+
+font-size:14px;
+
+}
+
+
+
+.hero{
+
+padding:60px 0;
+
+}
+
+
+
+.hero h1{
+
+font-size:70px;
+
+font-weight:700;
+
+color:#003f91;
+
+}
+
+
+
+.hero span{
+
+color:#1faa48;
+
+}
+
+
+
+.hero p{
+
+font-size:22px;
+
+margin-top:20px;
+
+}
+
+
+
+.hero-image{
+
+border-radius:15px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.2);
+
+}
+
+
+
+.fitur{
+
+display:flex;
+
+gap:40px;
+
+margin-top:40px;
+
+}
+
+
+
+.fitur div{
+
+text-align:center;
+
+}
+
+
+
+.fitur i{
+
+font-size:40px;
+
+color:#0f4ea8;
+
+}
+
+
+
+.coming{
+
+background:white;
+
+padding:100px;
+
+text-align:center;
+
+border-radius:15px;
+
+box-shadow:0px 10px 30px rgba(0,0,0,.08);
+
+}
+
+
+
+footer{
+
+background:#003f91;
+
+color:white;
+
+padding:30px;
+
+text-align:center;
+
+margin-top:80px;
 
 }
