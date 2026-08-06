@@ -441,3 +441,35 @@ border-radius:50px;
     object-fit:cover;
     box-shadow:0 20px 40px rgba(0,0,0,.25);
 }
+
+/* =======================================
+   FOOTER CONTACT
+======================================= */
+
+.footer-line{
+    border-color:rgba(255,255,255,.25);
+    margin:20px auto;
+    width:70%;
+}
+
+.footer-contact p{
+    margin:8px 0;
+    font-size:16px;
+}
+
+.footer-contact i{
+    color:#ffd54f;
+    margin-right:8px;
+}
+
+.footer-contact a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:500;
+    transition:.3s;
+}
+
+.footer-contact a:hover{
+    color:#ffd54f;
+    text-decoration:underline;
+}
